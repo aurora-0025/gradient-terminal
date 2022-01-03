@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "gradient-string": "^2.0.0",
+    "tinygradient": "^1.1.5",
+    "yargs": "^17.3.1"
+  },
+  "name": "gradient-terminal",
+  "version": "1.0.0",
+  "description": "A CLI Application to log colored text.",
+  "main": "bin/index.js",
+  "bin": {
+    "gterm": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ritin George",
+  "license": "ISC"
+}
