@@ -1,29 +1,20 @@
 #!/usr/bin/env node
+const { applyGradient } = require("./gradient.js");
 
 var stdin = process.openStdin();
+var data;
+var args;
+var gradientColors;
 
-data = ''
-let gradient = require('gradient-string')
+process.stdin.resume();
+process.stdin.setEncoding("utf8");
+process.stdin.on("data", function (chunk) {
+  data = chunk.split("\r\n").join(" ");
+});
+process.stdin.on("end", main);
 
-stdin.on('data', function(chunk) {
-    data += chunk;
-  });
-  
-stdin.on('data', main);
-
-function main(){
-[,, ...args] = process.argv
-
-gradientColors = args
-
-function applyGrad(colors,inp){
-    console.log(gradient(colors).multiline(inp));
+function main() {
+  [, , ...args] = process.argv;
+  gradientColors = args;
+  applyGradient(gradientColors, data);
 }
-if (args==''){
-    return console.log(gradient.rainbow.multiline(data));
-}
-else {
-    applyGrad(gradientColors,data)
-}
-}
-
