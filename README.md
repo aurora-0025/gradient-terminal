@@ -38,3 +38,6 @@
 | "#f0f0f688"              |                       |                         |                          |
 | "f0f0f688"               |                       |                         |                          |
 
+## Dependencies
+
+- [tinygradient](https://github.com/mistic100/tinygradient) - Generate gradients
