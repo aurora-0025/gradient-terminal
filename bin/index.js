@@ -16,5 +16,9 @@ process.stdin.on("end", main);
 function main() {
   [, , ...args] = process.argv;
   gradientColors = args;
+  if (gradientColors < 2) {
+    console.log(gradientColors);
+    return console.log(`usage | gterm <color1 color2 ...>`);
+  }
   applyGradient(gradientColors, data);
 }

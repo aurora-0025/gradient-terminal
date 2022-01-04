@@ -1,5 +1,16 @@
 const tinygradient = require("tinygradient");
+var tinycolor = require("tinycolor2");
 function applyGradient(colors, data) {
+  if (data.split(" ").join("").length == 1) {
+    let rgb = tinycolor(colors[0]);
+    r = Math.round(rgb._r);
+    g = Math.round(rgb._g);
+    b = Math.round(rgb._b);
+    return console.log(`\x1b[38;2;${r};${g};${b}m${data}\x1b[0m`);
+  }
+  if (colors.length > data.split(" ").join("").length) {
+    colors = colors.slice(0, data.split(" ").join("").length);
+  }
   var gradient = tinygradient(colors);
   var hsv = gradient.hsv(data.split(" ").join("").length, "short");
   let rgb = hsv.map((color) => [color._r, color._g, color._b]);
