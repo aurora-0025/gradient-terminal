@@ -20,5 +20,12 @@ function main() {
     console.log(gradientColors);
     return console.log(`usage | gterm <color1 color2 ...>`);
   }
-  applyGradient(gradientColors, data);
+  lines = data.split("\n");
+  linechars = [];
+  let max_length = Math.max(...lines.map((el) => el.length));
+  for (line of lines) {
+    if (line != "") {
+      applyGradient(gradientColors, line, max_length);
+    } else console.log(line);
+  }
 }
