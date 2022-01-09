@@ -1,6 +1,7 @@
 const tinygradient = require("tinygradient");
 var tinycolor = require("tinycolor2");
 
+
 function applyGradient(colors, data, max_length) {
   let invalidColors = [];
 
@@ -45,8 +46,9 @@ function applyGradient(colors, data, max_length) {
       val += 1;
     }
   }
+  out = out.join('')
 
-  console.log(out.join(""));
+  return out
 }
 
 module.exports = {

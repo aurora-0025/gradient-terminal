@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const { applyGradient } = require("./gradient.js");
+const  Terminal = require("terminal.js")
 
 var args;
 var gradientColors;
@@ -24,7 +25,8 @@ function main(data) {
   let max_length = Math.max(...lines.map((el) => el.length));
   for (line of lines) {
     if (line != "") {
-      applyGradient(gradientColors, line, max_length);
+      console.log(applyGradient(gradientColors, line, max_length));
     } else console.log(line);
   }
 }
+
