@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 const { applyGradient } = require("./gradient.js");
 
-var stdin = process.openStdin();
-var data;
 var args;
 var gradientColors;
 
 process.stdin.resume();
-process.stdin.setEncoding("utf8");
-process.stdin.on("data", function (chunk) {
-  data = chunk.split("\r\n").join(" ");
+var content = '';
+process.stdin.on('data', function (data) {
+  content += data
+  main(content)
 });
-process.stdin.on("end", main);
 
-function main() {
+
+
+function main(data) {
   [, , ...args] = process.argv;
   gradientColors = args;
   if (gradientColors < 2) {
-    console.log(gradientColors);
     return console.log(`usage | gterm <color1 color2 ...>`);
   }
   lines = data.split("\n");
