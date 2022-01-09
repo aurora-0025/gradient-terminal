@@ -1,7 +1,6 @@
 const tinygradient = require("tinygradient");
 var tinycolor = require("tinycolor2");
 
-
 function applyGradient(colors, data, max_length) {
   let invalidColors = [];
 
@@ -11,7 +10,7 @@ function applyGradient(colors, data, max_length) {
     }
   }
   if (invalidColors.length != 0) {
-    return console.log(`${invalidColors} are not accepted`);
+    return process.stdout.write(`${invalidColors} are not accepted`);
   }
 
   if (max_length == 1) {
@@ -19,7 +18,8 @@ function applyGradient(colors, data, max_length) {
     r = Math.round(rgb._r);
     g = Math.round(rgb._g);
     b = Math.round(rgb._b);
-    return console.log(`\x1b[38;2;${r};${g};${b}m${data}\x1b[0m`);
+
+    return process.stdout.write(`\x1b[38;2;${r};${g};${b}m${data}\x1b[0m`);
   }
 
   if (colors.length > max_length) {
@@ -38,7 +38,6 @@ function applyGradient(colors, data, max_length) {
       r = Math.round(rgb[val][0]);
       g = Math.round(rgb[val][1]);
       b = Math.round(rgb[val][2]);
-
       out.push(`\x1b[38;2;${r};${g};${b}m${ele}\x1b[0m`);
       val += 1;
     } else {
@@ -46,9 +45,9 @@ function applyGradient(colors, data, max_length) {
       val += 1;
     }
   }
-  out = out.join('')
+  out = out.join("");
 
-  return out
+  return out;
 }
 
 module.exports = {
