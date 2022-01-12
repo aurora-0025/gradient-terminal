@@ -10,7 +10,10 @@
 >For Installation, you will only need Node.js.
 ---
 ## Install
-
+   ### Installing From npmjs
+    $ npm install -g gradient-terminal
+    
+   ### Installing From Source
     $ git clone https://github.com/aurora-0025/gradient-terminal.git
     $ cd gradient-terminal
     $ npm install -g .
