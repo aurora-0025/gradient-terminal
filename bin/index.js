@@ -13,7 +13,8 @@ process.stdin.on("data", function (data) {
 function main(data) {
   [, , ...args] = process.argv;
   gradientColors = args;
-  if (!gradientColors) {
+
+  if (gradientColors.length==0) {
     return process.stdout.write(`usage | gterm <color1 color2 ...>`);
   }
   
