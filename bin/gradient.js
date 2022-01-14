@@ -3,14 +3,16 @@ var tinycolor = require("tinycolor2");
 
 function applyGradient(colors, data, max_length) {
   let invalidColors = [];
-
   for (color of colors) {
     if (!tinycolor(color).isValid()) {
-      invalidColors.push(color);
+      if(!invalidColors.includes(color)){
+        invalidColors.push(color);
     }
   }
+  }
   if (invalidColors.length != 0) {
-    return process.stdout.write(`${invalidColors} are not accepted`);
+    if(invalidColors.length == 1)return process.stdout.write(`${invalidColors} is not an accepted color\n`)
+    return process.stdout.write(`${invalidColors} are not accepted colors\n`);
   }
 
   if (max_length == 1) {
@@ -47,7 +49,7 @@ function applyGradient(colors, data, max_length) {
   }
   out = out.join("");
 
-  return out;
+  return process.stdout.write(out+ '\n');
 }
 
 module.exports = {
