@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "strip-ansi": "^7.0.1",
     "tinygradient": "^1.1.5"
   },
   "name": "gradient-terminal",
+  "type": "module",
   "version": "1.0.1",
   "description": "A CLI progam show teminal outputs as gradients.",
   "main": "bin/index.js",
