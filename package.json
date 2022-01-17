@@ -18,7 +18,8 @@
     "rootDir": "./",
     "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
     "testPathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/tests/e2e/output.js"
     ],
     "collectCoverage": true,
     "coverageReporters": [
