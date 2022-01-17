@@ -16,7 +16,7 @@
   },
   "jest": {
     "rootDir": "./",
-    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.c?[jt]sx?$",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/tests/e2e/output.js"
