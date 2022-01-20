@@ -1,2 +1,4 @@
 node_modules
+idea.txt
+coverage
 package-lock.json

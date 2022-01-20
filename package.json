@@ -12,7 +12,20 @@
     "gterm": "bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "rootDir": "./",
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.c?[jt]sx?$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/e2e/output.js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ]
   },
   "author": "Ritin George",
   "license": "ISC",
@@ -23,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/aurora-0025/gradient-terminal/issues"
   },
-  "homepage": "https://github.com/aurora-0025/gradient-terminal#readme"
+  "homepage": "https://github.com/aurora-0025/gradient-terminal#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0"
+  }
 }
