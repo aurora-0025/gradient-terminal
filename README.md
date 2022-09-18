@@ -26,6 +26,12 @@
  <command> | gterm "<color1>" "<color2>" ... 
 ```
 
+### Example
+
+```
+ls | gterm red blue
+```
+
 ![](https://i.imgur.com/8KsaCcA.png)
 
 ## Accepted Color Formats
@@ -44,3 +50,4 @@
 ## Dependencies
 
 - [tinygradient](https://github.com/mistic100/tinygradient) - Generate gradients
+- [ansi-regex](https://github.com/chalk/ansi-regex) - Regular expression for matching ANSI escape codes
