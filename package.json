@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "strip-ansi": "^7.0.1",
+    "ansi-regex": "^6.0.1",
     "tinygradient": "^1.1.5"
   },
   "name": "gradient-terminal",
   "type": "module",
-  "version": "1.0.1",
-  "description": "A CLI progam show teminal outputs as gradients.",
+  "version": "1.2.0",
+  "description": "A CLI progam display teminal outputs as gradients.",
   "main": "bin/index.js",
   "bin": {
     "gterm": "bin/index.js"
@@ -28,7 +28,7 @@
     ]
   },
   "author": "Ritin George",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aurora-0025/gradient-terminal.git"
