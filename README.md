@@ -51,3 +51,5 @@ ls | gterm red blue
 
 - [tinygradient](https://github.com/mistic100/tinygradient) - Generate gradients
 - [ansi-regex](https://github.com/chalk/ansi-regex) - Regular expression for matching ANSI escape codes
+
+```Liked It? Why not leave a star ⭐```
