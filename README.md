@@ -1,8 +1,8 @@
 <p align="center">
-  <img width="150" alt="favicon" src="https://i.imgur.com/1Samqwu.png">
+  <img width="150" alt="favicon" src="https://github.com/aurora-0025/gradient-terminal/blob/master/assets/gtem_logo.png?raw=true">
 </p>
  <h1 align="center" >GRADIENT-TERMINAL</h1>
->A CLI progam to display teminal outputs as gradients.
+> A CLI progam to display teminal outputs as gradients.
 
 ---
 ## Requirements
