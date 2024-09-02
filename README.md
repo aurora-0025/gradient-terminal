@@ -1,6 +1,7 @@
-# GRADIENT-TERMINAL
-![](https://i.imgur.com/1Samqwu.png)
-
+<p align="center">
+  <img width="150" alt="favicon" src="https://i.imgur.com/1Samqwu.png">
+</p>
+ <h1 align="center" >GRADIENT-TERMINAL</h1>
 >A CLI progam to display teminal outputs as gradients.
 
 ---
